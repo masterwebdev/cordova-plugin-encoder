@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.autovitalsinc.encoder"
+        version="0.01">
+
+  <name>AV Encoder</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+  
+  <js-module src="www/encoder.js" name="encoder">
+    <clobbers target="encoder" />
+  </js-module>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Encoder">
+        <param name="ios-package" value="AVEncoder" />
+        <param name="onload" value="true"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/AVEncoder.h" target-dir="EncoderPlugin"/>
+    <source-file src="src/ios/AVEncoder.m" target-dir="EncoderPlugin"/>
+  </platform>
+  
+    <!-- android -->
+    <platform name="android">
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="Encoder">
+          <param name="android-package" value="com.autovitalsinc.encoder.Encoder" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/Encoder.java" target-dir="src/com/autovitalsinc/encoder/" />
+    </platform>
+
+</plugin>
