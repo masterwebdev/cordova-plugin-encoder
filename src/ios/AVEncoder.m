@@ -60,8 +60,8 @@
     compressionEncoder.videoSettings = @
     {
     AVVideoCodecKey: AVVideoCodecH264,
-    AVVideoWidthKey: @1280,   //Set your resolution width here
-    AVVideoHeightKey: @720,  //set your resolution height here
+    AVVideoWidthKey: @1024,   //Set your resolution width here
+    AVVideoHeightKey: @768,  //set your resolution height here
     AVVideoCompressionPropertiesKey: @
         {
         AVVideoAverageBitRateKey: @1000000, // Give your bitrate here for lower size give low values

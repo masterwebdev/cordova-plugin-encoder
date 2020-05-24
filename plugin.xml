@@ -24,6 +24,8 @@
 
     <header-file src="src/ios/AVEncoder.h" target-dir="EncoderPlugin"/>
     <source-file src="src/ios/AVEncoder.m" target-dir="EncoderPlugin"/>
+	<header-file src="src/ios/SDAVAssetExportSession.h" target-dir="EncoderPlugin"/>
+    <source-file src="src/ios/SDAVAssetExportSession.m" target-dir="EncoderPlugin"/>
   </platform>
   
     <!-- android -->
@@ -36,6 +38,8 @@
       </config-file>
 
       <source-file src="src/android/Encoder.java" target-dir="src/com/autovitalsinc/encoder/" />
+	  <source-file src="src/android/isoparser-1.1.22.jar" target-dir="libs/" />
+	  <source-file src="src/android/slf4j-api-1.7.30.jar" target-dir="libs/" />
     </platform>
 
 </plugin>
